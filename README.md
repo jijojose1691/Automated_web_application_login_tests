@@ -18,8 +18,10 @@ pip install --upgrade robotframework-selenium2library
 4. Install latest Google chrome and Chrome driver  https://www.youtube.com/watch?v=dz59GsdvUF8
 
 
-Test Environment:
+##Test Environment:
+
 OS: Windows 10
+
 Python version : 2.7
 
 ## How to execute tests
