@@ -1,5 +1,5 @@
 ## Automated web application login tests
-Set of automated functional tests using Robot framework to verify web application login functionality
+Set of automated functional tests using Robot framework to verify web application login functionality using Chrome browser
 
 ## Prerequisite
 
@@ -15,8 +15,12 @@ pip install robotframework
 pip install --upgrade robotframework-selenium2library
 ```
 
-4. Install Google chrome and Chrome driver  https://www.youtube.com/watch?v=dz59GsdvUF8
+4. Install latest Google chrome and Chrome driver  https://www.youtube.com/watch?v=dz59GsdvUF8
 
+
+Test Environment:
+OS: Windows 10
+Python version : 2.7
 
 ## How to execute tests
 
