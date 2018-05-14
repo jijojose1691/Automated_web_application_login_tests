@@ -40,35 +40,35 @@ Login Page Should Be Open
     Title Should Be    ${PAGE_TITLE}
 
 I enter valid username and password
-    [Documentation]    The keyword enter valid username and passwrod on the given input fields
+    [Documentation]    The keyword enter valid username and password on the given input fields
     user "${VALID_USERNAME}" logs in with password "${VALID_PASSWORD}"
 
-I enter valid usename and empty password
-    [Documentation]    The keyword enter valid username and empty passwrod on the given input fields
+I enter valid username and empty password
+    [Documentation]    The keyword enter valid username and empty password on the given input fields
     user "${VALID_USERNAME}" logs in with password ""
 
-I enter empty usename and empty password
-    [Documentation]    The keyword enter empty username and empty passwrod on the given input fields
+I enter empty username and empty password
+    [Documentation]    The keyword enter an empty username and an empty password on the given input fields
     user "" logs in with password ""
 
-I enter empty usename and valid password
-    [Documentation]    The keyword enter empty username and valid passwrod on the given input fields
+I enter empty username and valid password
+    [Documentation]    The keyword enter an empty username and valid password on the given input fields
     user "" logs in with password "${VALID_PASSWORD}"
 
-I enter invalid usename and invalid password
-    [Documentation]    The keyword enter invalid username and invalid passwrod on the given input fields
+I enter invalid username and invalid password
+    [Documentation]    The keyword enter an invalid username and an invalid password on the given input fields
     user "${INVALID_USERNAME}" logs in with password "${INVALID_PASSWORD}"
 
-I enter valid usename and invalid password
-    [Documentation]    The keyword enter valid username and invalid passwrod on the given input fields
+I enter valid username and invalid password
+    [Documentation]    The keyword enter valid username and an invalid password on the given input fields
     user "${VALID_USERNAME}" logs in with password "${INVALID_PASSWORD}"
 
-I enter invalid usename and valid password
-    [Documentation]    The keyword enter invalid username and valid passwrod on the given input fields
+I enter invalid username and valid password
+    [Documentation]    The keyword enter an invalid username and valid password on the given input fields
     user "${INVALID_USERNAME}" logs in with password "${VALID_PASSWORD}"
 
 I submit credentials
-    [Documentation]    The keyword will submit credentils to controller
+    [Documentation]    The keyword will submit credentials to the controller
     Submit Credentials
 
 Input Username
@@ -82,16 +82,16 @@ Input Password
     Input Text    pwd    ${password}
 
 Submit Credentials
-    [Documentation]    The keyword will submit credentils to controller by clicking the Login button
+    [Documentation]    The keyword will submit credentials to the controller by clicking the Login button
     Click Button    Login
 
 Welcome Page Should Be Open
-    [Documentation]    The keyword verifes that the welcome page is opened
+    [Documentation]    The keyword verifies that the welcome page is opened
     Location Should Be    ${WELCOME URL}
     Title Should Be    ${PAGE_TITLE}
 
 Welcome Page Should not Open
-    [Documentation]    The keyword verifes that the welcome page is not opened
+    [Documentation]    The keyword verifies that the welcome page is not opened
     ${status}  run keyword and return status   Location Should Be    ${WELCOME URL}
     should not be true  ${status}
     Title Should Be    ${PAGE_TITLE}
@@ -102,32 +102,31 @@ User "${username}" logs in with password "${password}"
     Input password    ${password}
 
 verify that the user credentials were sent
-    [Documentation]    The keyword verifes that page contains text WELCOME and not contains any other values
-    verify that the page does not contains    ${OUTPUT_TEXT_ELEMENT}    ACCESS DENIED!     Failed to send user credentials properly. Access is denied
-    verify that the page does not contains    ${OUTPUT_TEXT_ELEMENT}     THE SESSION COOKIE IS MISSING OR HAS A WRONG VALUE!    User credentials were properly sent but the session cookie was not properly passed
-    verify that the page does not contains    ${OUTPUT_TEXT_ELEMENT}     REDIRECTING...    User credentials were properly sent but HTTP redirection was not processed
-    verify that the page contains    ${OUTPUT_TEXT_ELEMENT}     WELCOME :)     Failed to send user credentials
+    [Documentation]    The keyword verifies that page contains text WELCOME and not contains any other values
+    verify that the page does not contain    ${OUTPUT_TEXT_ELEMENT}    ACCESS DENIED!     Failed to send user credentials properly. Access is denied
+    verify that the page does not contain    ${OUTPUT_TEXT_ELEMENT}     THE SESSION COOKIE IS MISSING OR HAS A WRONG VALUE!    User credentials were properly sent but the session cookie was not properly passed
+    verify that the page does not contain    ${OUTPUT_TEXT_ELEMENT}     REDIRECTING...    User credentials were properly sent but HTTP redirection was not processed
+    verify that the page contain    ${OUTPUT_TEXT_ELEMENT}     WELCOME :)     Failed to send user credentials
 
 verify that the user credentials were not sent
-    [Documentation]    The keyword verifes that page contains text ACCESS DENIED and not contains any other values
-    verify that the page does not contains    ${OUTPUT_TEXT_ELEMENT}     WELCOME :)     Able to login page with invalid credentails
-    verify that the page does not contains    ${OUTPUT_TEXT_ELEMENT}     THE SESSION COOKIE IS MISSING OR HAS A WRONG VALUE!    User credentials were properly sent but the session cookie was not properly passed
-    verify that the page does not contains    ${OUTPUT_TEXT_ELEMENT}     REDIRECTING...    User credentials were properly sent but HTTP redirection was not processed
-    verify that the page contains    ${OUTPUT_TEXT_ELEMENT}     ACCESS DENIED!     Failed to login scenario with invalid credentails
+    [Documentation]    The keyword verifies that page contains text ACCESS DENIED and not contains any other values
+    verify that the page does not contain    ${OUTPUT_TEXT_ELEMENT}     WELCOME :)     Able to login page with invalid credentials
+    verify that the page does not contain    ${OUTPUT_TEXT_ELEMENT}     THE SESSION COOKIE IS MISSING OR HAS A WRONG VALUE!    User credentials were properly sent but the session cookie was not properly passed
+    verify that the page does not contain    ${OUTPUT_TEXT_ELEMENT}     REDIRECTING...    User credentials were properly sent but HTTP redirection was not processed
+    verify that the page contain    ${OUTPUT_TEXT_ELEMENT}     ACCESS DENIED!     Failed to login scenario with invalid credentials
 
 
-
-verify that the page contains
+verify that the page contain
     [Documentation]    The keyword verifes that given element contains given text
     [Arguments]    ${element}    ${value}    ${error_message}
     Element Should Contain    ${element}    ${value}    ${error_message}
 
-verify that the page does not contains
+verify that the page does not contain
     [Documentation]    The keyword verifes that given element doent not contains given text
     [Arguments]    ${element}    ${value}    ${error_message}
     Element Should Not Contain    ${element}    ${value}    ${error_message}
 
-Go to home page
+Go to the homepage
     [Documentation]    The keyword verifes that page is redirecting to home page whiel clicking on Go back button
     Wait Until Element Is Visible   xpath=//*[@id="case_login"]/a      10
     Click Element    xpath=//*[@id="case_login"]/a
