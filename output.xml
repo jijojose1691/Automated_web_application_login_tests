@@ -1,0 +1,2000 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180514 22:41:49.336" generator="Robot 3.0.2 (Python 2.7.14 on win32)">
+<suite source="D:\My lab\Automated_web_application_login_tests\Tests" id="s1" name="Tests">
+<suite source="D:\My lab\Automated_web_application_login_tests\Tests\Invalid Login" id="s1-s1" name="Invalid Login">
+<suite source="D:\My lab\Automated_web_application_login_tests\Tests\Invalid Login\Invalid_Login_Scenario.robot" id="s1-s1-s1" name="Invalid Login Scenario">
+<kw type="setup" name="Default Suite Setup" library="keywords">
+<doc>The keyword contains the Default Setup steps for running the Functional Tests</doc>
+<kw name="Open Browser To Login Page" library="keywords">
+<doc>The keyword opens the login page and verify the login page is opened</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>browser=${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180514 22:41:49.537" level="INFO">Opening browser 'chrome' to base url 'http://testing-ground.scraping.pro/login'.</msg>
+<status status="PASS" endtime="20180514 22:41:55.077" starttime="20180514 22:41:49.536"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180514 22:41:56.220" starttime="20180514 22:41:55.079"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="keywords">
+<doc>The keyword verifies that login page is opened</doc>
+<kw name="Location Should Contain" library="Selenium2Library">
+<doc>Verifies that current URL contains ``expected``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+</arguments>
+<msg timestamp="20180514 22:41:56.234" level="INFO">Current location contains 'http://testing-ground.scraping.pro/login'.</msg>
+<status status="PASS" endtime="20180514 22:41:56.234" starttime="20180514 22:41:56.220"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>${PAGE_TITLE}</arg>
+</arguments>
+<msg timestamp="20180514 22:41:56.247" level="INFO">Page title is 'Web Scraper Testing Ground'.</msg>
+<status status="PASS" endtime="20180514 22:41:56.247" starttime="20180514 22:41:56.235"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:41:56.247" starttime="20180514 22:41:56.220"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:41:56.247" starttime="20180514 22:41:49.536"></status>
+</kw>
+<timeout value="5 minutes"></timeout>
+<status status="PASS" endtime="20180514 22:41:56.248" starttime="20180514 22:41:49.535"></status>
+</kw>
+<test id="s1-s1-s1-t1" name="Invalid_Login_Scenario">
+<kw name="Given I enter invalid username and invalid password" library="keywords">
+<doc>The keyword enter an invalid username and an invalid password on the given input fields</doc>
+<kw name="user &quot;${INVALID_USERNAME}&quot; logs in with password &quot;${INVALID_PASSWORD}&quot;" library="keywords">
+<doc>The keyword will fill the input text field with given username and password</doc>
+<kw name="Input Username" library="keywords">
+<doc>The keyword will inpurt given username to inout field with id usr</doc>
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>usr</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180514 22:41:56.259" level="INFO">Typing text 'invalidadmin' into text field 'usr'.</msg>
+<status status="PASS" endtime="20180514 22:41:56.379" starttime="20180514 22:41:56.258"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:41:56.379" starttime="20180514 22:41:56.257"></status>
+</kw>
+<kw name="Input Password" library="keywords">
+<doc>The keyword will inpurt given password to input field with id pwd</doc>
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>pwd</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180514 22:41:56.379" level="INFO">Typing text 'invalidpassword' into text field 'pwd'.</msg>
+<status status="PASS" endtime="20180514 22:41:56.498" starttime="20180514 22:41:56.379"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:41:56.498" starttime="20180514 22:41:56.379"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:41:56.498" starttime="20180514 22:41:56.255"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:41:56.499" starttime="20180514 22:41:56.253"></status>
+</kw>
+<kw name="When I submit credentials" library="keywords">
+<doc>The keyword will submit credentials to the controller</doc>
+<kw name="Submit Credentials" library="keywords">
+<doc>The keyword will submit credentials to the controller by clicking the Login button</doc>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>Login</arg>
+</arguments>
+<msg timestamp="20180514 22:41:56.500" level="INFO">Clicking button 'Login'.</msg>
+<status status="PASS" endtime="20180514 22:41:56.950" starttime="20180514 22:41:56.500"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:41:56.950" starttime="20180514 22:41:56.500"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:41:56.950" starttime="20180514 22:41:56.499"></status>
+</kw>
+<kw name="Then Welcome Page Should not Open" library="keywords">
+<doc>The keyword verifies that the welcome page is not opened</doc>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Location Should Be</arg>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180514 22:41:57.244" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-26.png"&gt;&lt;img src="selenium-screenshot-26.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180514 22:41:57.244" starttime="20180514 22:41:56.959"></status>
+</kw>
+<msg timestamp="20180514 22:41:57.245" level="FAIL">Location should have been 'http://testing-ground.scraping.pro/login?mode=welcome' but was 'http://testing-ground.scraping.pro/login?mode=login'.</msg>
+<status status="FAIL" endtime="20180514 22:41:57.245" starttime="20180514 22:41:56.953"></status>
+</kw>
+<msg timestamp="20180514 22:41:57.245" level="INFO">${status} = False</msg>
+<status status="PASS" endtime="20180514 22:41:57.245" starttime="20180514 22:41:56.952"></status>
+</kw>
+<kw name="Should Not Be True" library="BuiltIn">
+<doc>Fails if the given condition is true.</doc>
+<arguments>
+<arg>${status}</arg>
+</arguments>
+<status status="PASS" endtime="20180514 22:41:57.245" starttime="20180514 22:41:57.245"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>${PAGE_TITLE}</arg>
+</arguments>
+<msg timestamp="20180514 22:41:57.251" level="INFO">Page title is 'Web Scraper Testing Ground'.</msg>
+<status status="PASS" endtime="20180514 22:41:57.251" starttime="20180514 22:41:57.245"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:41:57.251" starttime="20180514 22:41:56.951"></status>
+</kw>
+<kw name="And verify that the user credentials were not sent" library="keywords">
+<doc>The keyword verifies that page contains text ACCESS DENIED and not contains any other values</doc>
+<kw name="verify that the page does not contain" library="keywords">
+<doc>The keyword verifes that given element doent not contains given text</doc>
+<arguments>
+<arg>${OUTPUT_TEXT_ELEMENT}</arg>
+<arg>WELCOME :)</arg>
+<arg>Able to login page with invalid credentials</arg>
+</arguments>
+<kw name="Element Should Not Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` does not contains text ``expected``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${value}</arg>
+<arg>${error_message}</arg>
+</arguments>
+<msg timestamp="20180514 22:41:57.284" level="INFO">Element 'case_login' does not contain text 'WELCOME :)'.</msg>
+<status status="PASS" endtime="20180514 22:41:57.284" starttime="20180514 22:41:57.253"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:41:57.284" starttime="20180514 22:41:57.252"></status>
+</kw>
+<kw name="verify that the page does not contain" library="keywords">
+<doc>The keyword verifes that given element doent not contains given text</doc>
+<arguments>
+<arg>${OUTPUT_TEXT_ELEMENT}</arg>
+<arg>THE SESSION COOKIE IS MISSING OR HAS A WRONG VALUE!</arg>
+<arg>User credentials were properly sent but the session cookie was not properly passed</arg>
+</arguments>
+<kw name="Element Should Not Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` does not contains text ``expected``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${value}</arg>
+<arg>${error_message}</arg>
+</arguments>
+<msg timestamp="20180514 22:41:57.302" level="INFO">Element 'case_login' does not contain text 'THE SESSION COOKIE IS MISSING OR HAS A WRONG VALUE!'.</msg>
+<status status="PASS" endtime="20180514 22:41:57.302" starttime="20180514 22:41:57.285"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:41:57.302" starttime="20180514 22:41:57.284"></status>
+</kw>
+<kw name="verify that the page does not contain" library="keywords">
+<doc>The keyword verifes that given element doent not contains given text</doc>
+<arguments>
+<arg>${OUTPUT_TEXT_ELEMENT}</arg>
+<arg>REDIRECTING...</arg>
+<arg>User credentials were properly sent but HTTP redirection was not processed</arg>
+</arguments>
+<kw name="Element Should Not Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` does not contains text ``expected``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${value}</arg>
+<arg>${error_message}</arg>
+</arguments>
+<msg timestamp="20180514 22:41:57.320" level="INFO">Element 'case_login' does not contain text 'REDIRECTING...'.</msg>
+<status status="PASS" endtime="20180514 22:41:57.320" starttime="20180514 22:41:57.303"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:41:57.320" starttime="20180514 22:41:57.303"></status>
+</kw>
+<kw name="verify that the page contain" library="keywords">
+<doc>The keyword verifes that given element contains given text</doc>
+<arguments>
+<arg>${OUTPUT_TEXT_ELEMENT}</arg>
+<arg>ACCESS DENIED!</arg>
+<arg>Failed to login scenario with invalid credentials</arg>
+</arguments>
+<kw name="Element Should Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${value}</arg>
+<arg>${error_message}</arg>
+</arguments>
+<msg timestamp="20180514 22:41:57.337" level="INFO">Element 'case_login' contains text 'ACCESS DENIED!'.</msg>
+<status status="PASS" endtime="20180514 22:41:57.337" starttime="20180514 22:41:57.321"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:41:57.337" starttime="20180514 22:41:57.320"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:41:57.337" starttime="20180514 22:41:57.252"></status>
+</kw>
+<kw type="teardown" name="Go to the homepage" library="keywords">
+<doc>The keyword verifes that page is redirecting to home page whiel clicking on Go back button</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="case_login"]/a</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180514 22:41:57.365" starttime="20180514 22:41:57.338"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="case_login"]/a</arg>
+</arguments>
+<msg timestamp="20180514 22:41:57.366" level="INFO">Clicking element 'xpath=//*[@id="case_login"]/a'.</msg>
+<status status="PASS" endtime="20180514 22:41:57.957" starttime="20180514 22:41:57.366"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="keywords">
+<doc>The keyword verifies that login page is opened</doc>
+<kw name="Location Should Contain" library="Selenium2Library">
+<doc>Verifies that current URL contains ``expected``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+</arguments>
+<msg timestamp="20180514 22:41:57.963" level="INFO">Current location contains 'http://testing-ground.scraping.pro/login'.</msg>
+<status status="PASS" endtime="20180514 22:41:57.963" starttime="20180514 22:41:57.958"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>${PAGE_TITLE}</arg>
+</arguments>
+<msg timestamp="20180514 22:41:57.968" level="INFO">Page title is 'Web Scraper Testing Ground'.</msg>
+<status status="PASS" endtime="20180514 22:41:57.968" starttime="20180514 22:41:57.963"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:41:57.969" starttime="20180514 22:41:57.957"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:41:57.969" starttime="20180514 22:41:57.338"></status>
+</kw>
+<doc>The test to verify invalid login scenario.
+It will verify that page is showing error properly if the user enters invalid username and password</doc>
+<tags>
+<tag>invalidLogin</tag>
+</tags>
+<status status="PASS" endtime="20180514 22:41:57.970" critical="yes" starttime="20180514 22:41:56.248"></status>
+</test>
+<kw type="teardown" name="Default Suite Teardown" library="keywords">
+<doc>The keyword contains the Default Teardown steps for the Functional Tests</doc>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180514 22:42:01.166" starttime="20180514 22:41:57.974"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:01.166" starttime="20180514 22:41:57.974"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:01.166" starttime="20180514 22:41:49.381"></status>
+</suite>
+<suite source="D:\My lab\Automated_web_application_login_tests\Tests\Invalid Login\Invalid_Login_Scenario_With_Empty_Password.robot" id="s1-s1-s2" name="Invalid Login Scenario With Empty Password">
+<kw type="setup" name="Default Suite Setup" library="keywords">
+<doc>The keyword contains the Default Setup steps for running the Functional Tests</doc>
+<kw name="Open Browser To Login Page" library="keywords">
+<doc>The keyword opens the login page and verify the login page is opened</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>browser=${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:01.206" level="INFO">Opening browser 'chrome' to base url 'http://testing-ground.scraping.pro/login'.</msg>
+<status status="PASS" endtime="20180514 22:42:06.867" starttime="20180514 22:42:01.204"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180514 22:42:08.011" starttime="20180514 22:42:06.867"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="keywords">
+<doc>The keyword verifies that login page is opened</doc>
+<kw name="Location Should Contain" library="Selenium2Library">
+<doc>Verifies that current URL contains ``expected``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:08.020" level="INFO">Current location contains 'http://testing-ground.scraping.pro/login'.</msg>
+<status status="PASS" endtime="20180514 22:42:08.021" starttime="20180514 22:42:08.012"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>${PAGE_TITLE}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:08.027" level="INFO">Page title is 'Web Scraper Testing Ground'.</msg>
+<status status="PASS" endtime="20180514 22:42:08.028" starttime="20180514 22:42:08.021"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:08.028" starttime="20180514 22:42:08.011"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:08.028" starttime="20180514 22:42:01.204"></status>
+</kw>
+<timeout value="5 minutes"></timeout>
+<status status="PASS" endtime="20180514 22:42:08.028" starttime="20180514 22:42:01.203"></status>
+</kw>
+<test id="s1-s1-s2-t1" name="Invalid_Login_Scenario_With_Empty_Password">
+<kw name="Given I enter valid username and empty password" library="keywords">
+<doc>The keyword enter valid username and empty password on the given input fields</doc>
+<kw name="user &quot;${VALID_USERNAME}&quot; logs in with password &quot;&quot;" library="keywords">
+<doc>The keyword will fill the input text field with given username and password</doc>
+<kw name="Input Username" library="keywords">
+<doc>The keyword will inpurt given username to inout field with id usr</doc>
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>usr</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:08.032" level="INFO">Typing text 'admin' into text field 'usr'.</msg>
+<status status="PASS" endtime="20180514 22:42:08.126" starttime="20180514 22:42:08.032"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:08.126" starttime="20180514 22:42:08.032"></status>
+</kw>
+<kw name="Input Password" library="keywords">
+<doc>The keyword will inpurt given password to input field with id pwd</doc>
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>pwd</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:08.127" level="INFO">Typing text '' into text field 'pwd'.</msg>
+<status status="PASS" endtime="20180514 22:42:08.198" starttime="20180514 22:42:08.127"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:08.198" starttime="20180514 22:42:08.126"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:08.198" starttime="20180514 22:42:08.031"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:08.198" starttime="20180514 22:42:08.031"></status>
+</kw>
+<kw name="When I submit credentials" library="keywords">
+<doc>The keyword will submit credentials to the controller</doc>
+<kw name="Submit Credentials" library="keywords">
+<doc>The keyword will submit credentials to the controller by clicking the Login button</doc>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>Login</arg>
+</arguments>
+<msg timestamp="20180514 22:42:08.200" level="INFO">Clicking button 'Login'.</msg>
+<status status="PASS" endtime="20180514 22:42:08.604" starttime="20180514 22:42:08.199"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:08.604" starttime="20180514 22:42:08.199"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:08.604" starttime="20180514 22:42:08.199"></status>
+</kw>
+<kw name="Then Welcome Page Should not Open" library="keywords">
+<doc>The keyword verifies that the welcome page is not opened</doc>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Location Should Be</arg>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180514 22:42:08.906" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-27.png"&gt;&lt;img src="selenium-screenshot-27.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180514 22:42:08.906" starttime="20180514 22:42:08.612"></status>
+</kw>
+<msg timestamp="20180514 22:42:08.907" level="FAIL">Location should have been 'http://testing-ground.scraping.pro/login?mode=welcome' but was 'http://testing-ground.scraping.pro/login?mode=login'.</msg>
+<status status="FAIL" endtime="20180514 22:42:08.907" starttime="20180514 22:42:08.606"></status>
+</kw>
+<msg timestamp="20180514 22:42:08.907" level="INFO">${status} = False</msg>
+<status status="PASS" endtime="20180514 22:42:08.907" starttime="20180514 22:42:08.605"></status>
+</kw>
+<kw name="Should Not Be True" library="BuiltIn">
+<doc>Fails if the given condition is true.</doc>
+<arguments>
+<arg>${status}</arg>
+</arguments>
+<status status="PASS" endtime="20180514 22:42:08.907" starttime="20180514 22:42:08.907"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>${PAGE_TITLE}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:08.913" level="INFO">Page title is 'Web Scraper Testing Ground'.</msg>
+<status status="PASS" endtime="20180514 22:42:08.913" starttime="20180514 22:42:08.907"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:08.913" starttime="20180514 22:42:08.605"></status>
+</kw>
+<kw name="And verify that the user credentials were not sent" library="keywords">
+<doc>The keyword verifies that page contains text ACCESS DENIED and not contains any other values</doc>
+<kw name="verify that the page does not contain" library="keywords">
+<doc>The keyword verifes that given element doent not contains given text</doc>
+<arguments>
+<arg>${OUTPUT_TEXT_ELEMENT}</arg>
+<arg>WELCOME :)</arg>
+<arg>Able to login page with invalid credentials</arg>
+</arguments>
+<kw name="Element Should Not Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` does not contains text ``expected``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${value}</arg>
+<arg>${error_message}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:08.947" level="INFO">Element 'case_login' does not contain text 'WELCOME :)'.</msg>
+<status status="PASS" endtime="20180514 22:42:08.947" starttime="20180514 22:42:08.914"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:08.947" starttime="20180514 22:42:08.914"></status>
+</kw>
+<kw name="verify that the page does not contain" library="keywords">
+<doc>The keyword verifes that given element doent not contains given text</doc>
+<arguments>
+<arg>${OUTPUT_TEXT_ELEMENT}</arg>
+<arg>THE SESSION COOKIE IS MISSING OR HAS A WRONG VALUE!</arg>
+<arg>User credentials were properly sent but the session cookie was not properly passed</arg>
+</arguments>
+<kw name="Element Should Not Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` does not contains text ``expected``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${value}</arg>
+<arg>${error_message}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:08.966" level="INFO">Element 'case_login' does not contain text 'THE SESSION COOKIE IS MISSING OR HAS A WRONG VALUE!'.</msg>
+<status status="PASS" endtime="20180514 22:42:08.966" starttime="20180514 22:42:08.947"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:08.967" starttime="20180514 22:42:08.947"></status>
+</kw>
+<kw name="verify that the page does not contain" library="keywords">
+<doc>The keyword verifes that given element doent not contains given text</doc>
+<arguments>
+<arg>${OUTPUT_TEXT_ELEMENT}</arg>
+<arg>REDIRECTING...</arg>
+<arg>User credentials were properly sent but HTTP redirection was not processed</arg>
+</arguments>
+<kw name="Element Should Not Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` does not contains text ``expected``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${value}</arg>
+<arg>${error_message}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:08.983" level="INFO">Element 'case_login' does not contain text 'REDIRECTING...'.</msg>
+<status status="PASS" endtime="20180514 22:42:08.983" starttime="20180514 22:42:08.967"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:08.983" starttime="20180514 22:42:08.967"></status>
+</kw>
+<kw name="verify that the page contain" library="keywords">
+<doc>The keyword verifes that given element contains given text</doc>
+<arguments>
+<arg>${OUTPUT_TEXT_ELEMENT}</arg>
+<arg>ACCESS DENIED!</arg>
+<arg>Failed to login scenario with invalid credentials</arg>
+</arguments>
+<kw name="Element Should Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${value}</arg>
+<arg>${error_message}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:09.002" level="INFO">Element 'case_login' contains text 'ACCESS DENIED!'.</msg>
+<status status="PASS" endtime="20180514 22:42:09.002" starttime="20180514 22:42:08.984"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:09.002" starttime="20180514 22:42:08.983"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:09.002" starttime="20180514 22:42:08.914"></status>
+</kw>
+<kw type="teardown" name="Go to the homepage" library="keywords">
+<doc>The keyword verifes that page is redirecting to home page whiel clicking on Go back button</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="case_login"]/a</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180514 22:42:09.031" starttime="20180514 22:42:09.004"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="case_login"]/a</arg>
+</arguments>
+<msg timestamp="20180514 22:42:09.031" level="INFO">Clicking element 'xpath=//*[@id="case_login"]/a'.</msg>
+<status status="PASS" endtime="20180514 22:42:09.411" starttime="20180514 22:42:09.031"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="keywords">
+<doc>The keyword verifies that login page is opened</doc>
+<kw name="Location Should Contain" library="Selenium2Library">
+<doc>Verifies that current URL contains ``expected``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:09.418" level="INFO">Current location contains 'http://testing-ground.scraping.pro/login'.</msg>
+<status status="PASS" endtime="20180514 22:42:09.419" starttime="20180514 22:42:09.412"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>${PAGE_TITLE}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:09.424" level="INFO">Page title is 'Web Scraper Testing Ground'.</msg>
+<status status="PASS" endtime="20180514 22:42:09.424" starttime="20180514 22:42:09.419"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:09.424" starttime="20180514 22:42:09.411"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:09.424" starttime="20180514 22:42:09.003"></status>
+</kw>
+<doc>The test to verify invalid login scenario. It will verify that page
+is showing error properly if the user enters an empty password</doc>
+<tags>
+<tag>invalidLogin</tag>
+</tags>
+<status status="PASS" endtime="20180514 22:42:09.425" critical="yes" starttime="20180514 22:42:08.028"></status>
+</test>
+<kw type="teardown" name="Default Suite Teardown" library="keywords">
+<doc>The keyword contains the Default Teardown steps for the Functional Tests</doc>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180514 22:42:12.630" starttime="20180514 22:42:09.429"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:12.631" starttime="20180514 22:42:09.428"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:12.631" starttime="20180514 22:42:01.181"></status>
+</suite>
+<suite source="D:\My lab\Automated_web_application_login_tests\Tests\Invalid Login\Invalid_Login_Scenario_With_Empty_Username.robot" id="s1-s1-s3" name="Invalid Login Scenario With Empty Username">
+<kw type="setup" name="Default Suite Setup" library="keywords">
+<doc>The keyword contains the Default Setup steps for running the Functional Tests</doc>
+<kw name="Open Browser To Login Page" library="keywords">
+<doc>The keyword opens the login page and verify the login page is opened</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>browser=${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:12.656" level="INFO">Opening browser 'chrome' to base url 'http://testing-ground.scraping.pro/login'.</msg>
+<status status="PASS" endtime="20180514 22:42:18.185" starttime="20180514 22:42:12.655"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180514 22:42:19.353" starttime="20180514 22:42:18.185"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="keywords">
+<doc>The keyword verifies that login page is opened</doc>
+<kw name="Location Should Contain" library="Selenium2Library">
+<doc>Verifies that current URL contains ``expected``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:19.361" level="INFO">Current location contains 'http://testing-ground.scraping.pro/login'.</msg>
+<status status="PASS" endtime="20180514 22:42:19.362" starttime="20180514 22:42:19.353"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>${PAGE_TITLE}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:19.372" level="INFO">Page title is 'Web Scraper Testing Ground'.</msg>
+<status status="PASS" endtime="20180514 22:42:19.373" starttime="20180514 22:42:19.362"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:19.373" starttime="20180514 22:42:19.353"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:19.373" starttime="20180514 22:42:12.655"></status>
+</kw>
+<timeout value="5 minutes"></timeout>
+<status status="PASS" endtime="20180514 22:42:19.373" starttime="20180514 22:42:12.654"></status>
+</kw>
+<test id="s1-s1-s3-t1" name="Invalid_Login_Scenario_With_Empty_Username">
+<kw name="Given I enter empty username and valid password" library="keywords">
+<doc>The keyword enter an empty username and valid password on the given input fields</doc>
+<kw name="user &quot;&quot; logs in with password &quot;${VALID_PASSWORD}&quot;" library="keywords">
+<doc>The keyword will fill the input text field with given username and password</doc>
+<kw name="Input Username" library="keywords">
+<doc>The keyword will inpurt given username to inout field with id usr</doc>
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>usr</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:19.377" level="INFO">Typing text '' into text field 'usr'.</msg>
+<status status="PASS" endtime="20180514 22:42:19.463" starttime="20180514 22:42:19.377"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:19.463" starttime="20180514 22:42:19.376"></status>
+</kw>
+<kw name="Input Password" library="keywords">
+<doc>The keyword will inpurt given password to input field with id pwd</doc>
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>pwd</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:19.464" level="INFO">Typing text '12345' into text field 'pwd'.</msg>
+<status status="PASS" endtime="20180514 22:42:19.542" starttime="20180514 22:42:19.464"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:19.543" starttime="20180514 22:42:19.463"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:19.543" starttime="20180514 22:42:19.376"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:19.543" starttime="20180514 22:42:19.375"></status>
+</kw>
+<kw name="When I submit credentials" library="keywords">
+<doc>The keyword will submit credentials to the controller</doc>
+<kw name="Submit Credentials" library="keywords">
+<doc>The keyword will submit credentials to the controller by clicking the Login button</doc>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>Login</arg>
+</arguments>
+<msg timestamp="20180514 22:42:19.544" level="INFO">Clicking button 'Login'.</msg>
+<status status="PASS" endtime="20180514 22:42:20.087" starttime="20180514 22:42:19.544"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:20.087" starttime="20180514 22:42:19.543"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:20.088" starttime="20180514 22:42:19.543"></status>
+</kw>
+<kw name="Then Welcome Page Should not Open" library="keywords">
+<doc>The keyword verifies that the welcome page is not opened</doc>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Location Should Be</arg>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180514 22:42:20.402" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-28.png"&gt;&lt;img src="selenium-screenshot-28.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180514 22:42:20.402" starttime="20180514 22:42:20.094"></status>
+</kw>
+<msg timestamp="20180514 22:42:20.403" level="FAIL">Location should have been 'http://testing-ground.scraping.pro/login?mode=welcome' but was 'http://testing-ground.scraping.pro/login?mode=login'.</msg>
+<status status="FAIL" endtime="20180514 22:42:20.403" starttime="20180514 22:42:20.089"></status>
+</kw>
+<msg timestamp="20180514 22:42:20.403" level="INFO">${status} = False</msg>
+<status status="PASS" endtime="20180514 22:42:20.403" starttime="20180514 22:42:20.089"></status>
+</kw>
+<kw name="Should Not Be True" library="BuiltIn">
+<doc>Fails if the given condition is true.</doc>
+<arguments>
+<arg>${status}</arg>
+</arguments>
+<status status="PASS" endtime="20180514 22:42:20.403" starttime="20180514 22:42:20.403"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>${PAGE_TITLE}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:20.408" level="INFO">Page title is 'Web Scraper Testing Ground'.</msg>
+<status status="PASS" endtime="20180514 22:42:20.408" starttime="20180514 22:42:20.403"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:20.409" starttime="20180514 22:42:20.088"></status>
+</kw>
+<kw name="And verify that the user credentials were not sent" library="keywords">
+<doc>The keyword verifies that page contains text ACCESS DENIED and not contains any other values</doc>
+<kw name="verify that the page does not contain" library="keywords">
+<doc>The keyword verifes that given element doent not contains given text</doc>
+<arguments>
+<arg>${OUTPUT_TEXT_ELEMENT}</arg>
+<arg>WELCOME :)</arg>
+<arg>Able to login page with invalid credentials</arg>
+</arguments>
+<kw name="Element Should Not Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` does not contains text ``expected``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${value}</arg>
+<arg>${error_message}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:20.440" level="INFO">Element 'case_login' does not contain text 'WELCOME :)'.</msg>
+<status status="PASS" endtime="20180514 22:42:20.440" starttime="20180514 22:42:20.410"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:20.440" starttime="20180514 22:42:20.410"></status>
+</kw>
+<kw name="verify that the page does not contain" library="keywords">
+<doc>The keyword verifes that given element doent not contains given text</doc>
+<arguments>
+<arg>${OUTPUT_TEXT_ELEMENT}</arg>
+<arg>THE SESSION COOKIE IS MISSING OR HAS A WRONG VALUE!</arg>
+<arg>User credentials were properly sent but the session cookie was not properly passed</arg>
+</arguments>
+<kw name="Element Should Not Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` does not contains text ``expected``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${value}</arg>
+<arg>${error_message}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:20.458" level="INFO">Element 'case_login' does not contain text 'THE SESSION COOKIE IS MISSING OR HAS A WRONG VALUE!'.</msg>
+<status status="PASS" endtime="20180514 22:42:20.459" starttime="20180514 22:42:20.441"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:20.459" starttime="20180514 22:42:20.440"></status>
+</kw>
+<kw name="verify that the page does not contain" library="keywords">
+<doc>The keyword verifes that given element doent not contains given text</doc>
+<arguments>
+<arg>${OUTPUT_TEXT_ELEMENT}</arg>
+<arg>REDIRECTING...</arg>
+<arg>User credentials were properly sent but HTTP redirection was not processed</arg>
+</arguments>
+<kw name="Element Should Not Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` does not contains text ``expected``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${value}</arg>
+<arg>${error_message}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:20.475" level="INFO">Element 'case_login' does not contain text 'REDIRECTING...'.</msg>
+<status status="PASS" endtime="20180514 22:42:20.475" starttime="20180514 22:42:20.459"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:20.476" starttime="20180514 22:42:20.459"></status>
+</kw>
+<kw name="verify that the page contain" library="keywords">
+<doc>The keyword verifes that given element contains given text</doc>
+<arguments>
+<arg>${OUTPUT_TEXT_ELEMENT}</arg>
+<arg>ACCESS DENIED!</arg>
+<arg>Failed to login scenario with invalid credentials</arg>
+</arguments>
+<kw name="Element Should Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${value}</arg>
+<arg>${error_message}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:20.493" level="INFO">Element 'case_login' contains text 'ACCESS DENIED!'.</msg>
+<status status="PASS" endtime="20180514 22:42:20.493" starttime="20180514 22:42:20.476"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:20.493" starttime="20180514 22:42:20.476"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:20.493" starttime="20180514 22:42:20.409"></status>
+</kw>
+<kw type="teardown" name="Go to the homepage" library="keywords">
+<doc>The keyword verifes that page is redirecting to home page whiel clicking on Go back button</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="case_login"]/a</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180514 22:42:20.522" starttime="20180514 22:42:20.495"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="case_login"]/a</arg>
+</arguments>
+<msg timestamp="20180514 22:42:20.523" level="INFO">Clicking element 'xpath=//*[@id="case_login"]/a'.</msg>
+<status status="PASS" endtime="20180514 22:42:20.888" starttime="20180514 22:42:20.523"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="keywords">
+<doc>The keyword verifies that login page is opened</doc>
+<kw name="Location Should Contain" library="Selenium2Library">
+<doc>Verifies that current URL contains ``expected``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:20.895" level="INFO">Current location contains 'http://testing-ground.scraping.pro/login'.</msg>
+<status status="PASS" endtime="20180514 22:42:20.895" starttime="20180514 22:42:20.890"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>${PAGE_TITLE}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:20.900" level="INFO">Page title is 'Web Scraper Testing Ground'.</msg>
+<status status="PASS" endtime="20180514 22:42:20.900" starttime="20180514 22:42:20.896"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:20.901" starttime="20180514 22:42:20.888"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:20.901" starttime="20180514 22:42:20.494"></status>
+</kw>
+<doc>The test to verify invalid login scenario.
+It will verify that page is showing error properly if the user enters an empty username</doc>
+<tags>
+<tag>invalidLogin</tag>
+</tags>
+<status status="PASS" endtime="20180514 22:42:20.902" critical="yes" starttime="20180514 22:42:19.374"></status>
+</test>
+<kw type="teardown" name="Default Suite Teardown" library="keywords">
+<doc>The keyword contains the Default Teardown steps for the Functional Tests</doc>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180514 22:42:24.089" starttime="20180514 22:42:20.906"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:24.089" starttime="20180514 22:42:20.906"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:24.089" starttime="20180514 22:42:12.642"></status>
+</suite>
+<suite source="D:\My lab\Automated_web_application_login_tests\Tests\Invalid Login\Invalid_Login_Scenario_With_Empty_Username_And_Empty_Password.robot" id="s1-s1-s4" name="Invalid Login Scenario With Empty Username And Empty Password">
+<kw type="setup" name="Default Suite Setup" library="keywords">
+<doc>The keyword contains the Default Setup steps for running the Functional Tests</doc>
+<kw name="Open Browser To Login Page" library="keywords">
+<doc>The keyword opens the login page and verify the login page is opened</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>browser=${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:24.125" level="INFO">Opening browser 'chrome' to base url 'http://testing-ground.scraping.pro/login'.</msg>
+<status status="PASS" endtime="20180514 22:42:29.804" starttime="20180514 22:42:24.122"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180514 22:42:30.944" starttime="20180514 22:42:29.805"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="keywords">
+<doc>The keyword verifies that login page is opened</doc>
+<kw name="Location Should Contain" library="Selenium2Library">
+<doc>Verifies that current URL contains ``expected``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:30.957" level="INFO">Current location contains 'http://testing-ground.scraping.pro/login'.</msg>
+<status status="PASS" endtime="20180514 22:42:30.957" starttime="20180514 22:42:30.944"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>${PAGE_TITLE}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:30.966" level="INFO">Page title is 'Web Scraper Testing Ground'.</msg>
+<status status="PASS" endtime="20180514 22:42:30.967" starttime="20180514 22:42:30.958"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:30.967" starttime="20180514 22:42:30.944"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:30.968" starttime="20180514 22:42:24.122"></status>
+</kw>
+<timeout value="5 minutes"></timeout>
+<status status="PASS" endtime="20180514 22:42:30.968" starttime="20180514 22:42:24.120"></status>
+</kw>
+<test id="s1-s1-s4-t1" name="Invalid_Login_Scenario_With_Empty_Password">
+<kw name="Given I enter empty username and empty password" library="keywords">
+<doc>The keyword enter an empty username and an empty password on the given input fields</doc>
+<kw name="user &quot;&quot; logs in with password &quot;&quot;" library="keywords">
+<doc>The keyword will fill the input text field with given username and password</doc>
+<kw name="Input Username" library="keywords">
+<doc>The keyword will inpurt given username to inout field with id usr</doc>
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>usr</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:30.972" level="INFO">Typing text '' into text field 'usr'.</msg>
+<status status="PASS" endtime="20180514 22:42:31.062" starttime="20180514 22:42:30.972"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:31.062" starttime="20180514 22:42:30.971"></status>
+</kw>
+<kw name="Input Password" library="keywords">
+<doc>The keyword will inpurt given password to input field with id pwd</doc>
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>pwd</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:31.063" level="INFO">Typing text '' into text field 'pwd'.</msg>
+<status status="PASS" endtime="20180514 22:42:31.127" starttime="20180514 22:42:31.063"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:31.127" starttime="20180514 22:42:31.062"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:31.127" starttime="20180514 22:42:30.971"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:31.127" starttime="20180514 22:42:30.970"></status>
+</kw>
+<kw name="When I submit credentials" library="keywords">
+<doc>The keyword will submit credentials to the controller</doc>
+<kw name="Submit Credentials" library="keywords">
+<doc>The keyword will submit credentials to the controller by clicking the Login button</doc>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>Login</arg>
+</arguments>
+<msg timestamp="20180514 22:42:31.129" level="INFO">Clicking button 'Login'.</msg>
+<status status="PASS" endtime="20180514 22:42:31.509" starttime="20180514 22:42:31.129"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:31.509" starttime="20180514 22:42:31.128"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:31.510" starttime="20180514 22:42:31.128"></status>
+</kw>
+<kw name="Then Welcome Page Should not Open" library="keywords">
+<doc>The keyword verifies that the welcome page is not opened</doc>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Location Should Be</arg>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180514 22:42:31.799" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-29.png"&gt;&lt;img src="selenium-screenshot-29.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180514 22:42:31.799" starttime="20180514 22:42:31.520"></status>
+</kw>
+<msg timestamp="20180514 22:42:31.800" level="FAIL">Location should have been 'http://testing-ground.scraping.pro/login?mode=welcome' but was 'http://testing-ground.scraping.pro/login?mode=login'.</msg>
+<status status="FAIL" endtime="20180514 22:42:31.800" starttime="20180514 22:42:31.512"></status>
+</kw>
+<msg timestamp="20180514 22:42:31.800" level="INFO">${status} = False</msg>
+<status status="PASS" endtime="20180514 22:42:31.800" starttime="20180514 22:42:31.511"></status>
+</kw>
+<kw name="Should Not Be True" library="BuiltIn">
+<doc>Fails if the given condition is true.</doc>
+<arguments>
+<arg>${status}</arg>
+</arguments>
+<status status="PASS" endtime="20180514 22:42:31.800" starttime="20180514 22:42:31.800"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>${PAGE_TITLE}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:31.806" level="INFO">Page title is 'Web Scraper Testing Ground'.</msg>
+<status status="PASS" endtime="20180514 22:42:31.806" starttime="20180514 22:42:31.800"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:31.806" starttime="20180514 22:42:31.511"></status>
+</kw>
+<kw name="And verify that the user credentials were not sent" library="keywords">
+<doc>The keyword verifies that page contains text ACCESS DENIED and not contains any other values</doc>
+<kw name="verify that the page does not contain" library="keywords">
+<doc>The keyword verifes that given element doent not contains given text</doc>
+<arguments>
+<arg>${OUTPUT_TEXT_ELEMENT}</arg>
+<arg>WELCOME :)</arg>
+<arg>Able to login page with invalid credentials</arg>
+</arguments>
+<kw name="Element Should Not Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` does not contains text ``expected``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${value}</arg>
+<arg>${error_message}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:31.839" level="INFO">Element 'case_login' does not contain text 'WELCOME :)'.</msg>
+<status status="PASS" endtime="20180514 22:42:31.839" starttime="20180514 22:42:31.808"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:31.839" starttime="20180514 22:42:31.807"></status>
+</kw>
+<kw name="verify that the page does not contain" library="keywords">
+<doc>The keyword verifes that given element doent not contains given text</doc>
+<arguments>
+<arg>${OUTPUT_TEXT_ELEMENT}</arg>
+<arg>THE SESSION COOKIE IS MISSING OR HAS A WRONG VALUE!</arg>
+<arg>User credentials were properly sent but the session cookie was not properly passed</arg>
+</arguments>
+<kw name="Element Should Not Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` does not contains text ``expected``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${value}</arg>
+<arg>${error_message}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:31.857" level="INFO">Element 'case_login' does not contain text 'THE SESSION COOKIE IS MISSING OR HAS A WRONG VALUE!'.</msg>
+<status status="PASS" endtime="20180514 22:42:31.857" starttime="20180514 22:42:31.840"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:31.857" starttime="20180514 22:42:31.839"></status>
+</kw>
+<kw name="verify that the page does not contain" library="keywords">
+<doc>The keyword verifes that given element doent not contains given text</doc>
+<arguments>
+<arg>${OUTPUT_TEXT_ELEMENT}</arg>
+<arg>REDIRECTING...</arg>
+<arg>User credentials were properly sent but HTTP redirection was not processed</arg>
+</arguments>
+<kw name="Element Should Not Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` does not contains text ``expected``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${value}</arg>
+<arg>${error_message}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:31.874" level="INFO">Element 'case_login' does not contain text 'REDIRECTING...'.</msg>
+<status status="PASS" endtime="20180514 22:42:31.874" starttime="20180514 22:42:31.858"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:31.874" starttime="20180514 22:42:31.857"></status>
+</kw>
+<kw name="verify that the page contain" library="keywords">
+<doc>The keyword verifes that given element contains given text</doc>
+<arguments>
+<arg>${OUTPUT_TEXT_ELEMENT}</arg>
+<arg>ACCESS DENIED!</arg>
+<arg>Failed to login scenario with invalid credentials</arg>
+</arguments>
+<kw name="Element Should Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${value}</arg>
+<arg>${error_message}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:31.892" level="INFO">Element 'case_login' contains text 'ACCESS DENIED!'.</msg>
+<status status="PASS" endtime="20180514 22:42:31.892" starttime="20180514 22:42:31.875"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:31.893" starttime="20180514 22:42:31.874"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:31.893" starttime="20180514 22:42:31.807"></status>
+</kw>
+<kw type="teardown" name="Go to the homepage" library="keywords">
+<doc>The keyword verifes that page is redirecting to home page whiel clicking on Go back button</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="case_login"]/a</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180514 22:42:31.925" starttime="20180514 22:42:31.894"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="case_login"]/a</arg>
+</arguments>
+<msg timestamp="20180514 22:42:31.926" level="INFO">Clicking element 'xpath=//*[@id="case_login"]/a'.</msg>
+<status status="PASS" endtime="20180514 22:42:32.281" starttime="20180514 22:42:31.925"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="keywords">
+<doc>The keyword verifies that login page is opened</doc>
+<kw name="Location Should Contain" library="Selenium2Library">
+<doc>Verifies that current URL contains ``expected``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:32.291" level="INFO">Current location contains 'http://testing-ground.scraping.pro/login'.</msg>
+<status status="PASS" endtime="20180514 22:42:32.291" starttime="20180514 22:42:32.281"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>${PAGE_TITLE}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:32.296" level="INFO">Page title is 'Web Scraper Testing Ground'.</msg>
+<status status="PASS" endtime="20180514 22:42:32.296" starttime="20180514 22:42:32.291"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:32.297" starttime="20180514 22:42:32.281"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:32.297" starttime="20180514 22:42:31.893"></status>
+</kw>
+<doc>The test to verify invalid login scenario.
+It will verify that page is showing error properly if the user enters empty usenamd and empty password</doc>
+<tags>
+<tag>invalidLogin</tag>
+</tags>
+<status status="PASS" endtime="20180514 22:42:32.297" critical="yes" starttime="20180514 22:42:30.968"></status>
+</test>
+<kw type="teardown" name="Default Suite Teardown" library="keywords">
+<doc>The keyword contains the Default Teardown steps for the Functional Tests</doc>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180514 22:42:35.495" starttime="20180514 22:42:32.302"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:35.495" starttime="20180514 22:42:32.301"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:35.495" starttime="20180514 22:42:24.098"></status>
+</suite>
+<suite source="D:\My lab\Automated_web_application_login_tests\Tests\Invalid Login\Invalid_Login_Scenario_With_Invalid_Password.robot" id="s1-s1-s5" name="Invalid Login Scenario With Invalid Password">
+<kw type="setup" name="Default Suite Setup" library="keywords">
+<doc>The keyword contains the Default Setup steps for running the Functional Tests</doc>
+<kw name="Open Browser To Login Page" library="keywords">
+<doc>The keyword opens the login page and verify the login page is opened</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>browser=${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:35.517" level="INFO">Opening browser 'chrome' to base url 'http://testing-ground.scraping.pro/login'.</msg>
+<status status="PASS" endtime="20180514 22:42:41.312" starttime="20180514 22:42:35.516"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180514 22:42:42.445" starttime="20180514 22:42:41.312"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="keywords">
+<doc>The keyword verifies that login page is opened</doc>
+<kw name="Location Should Contain" library="Selenium2Library">
+<doc>Verifies that current URL contains ``expected``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:42.456" level="INFO">Current location contains 'http://testing-ground.scraping.pro/login'.</msg>
+<status status="PASS" endtime="20180514 22:42:42.456" starttime="20180514 22:42:42.446"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>${PAGE_TITLE}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:42.463" level="INFO">Page title is 'Web Scraper Testing Ground'.</msg>
+<status status="PASS" endtime="20180514 22:42:42.463" starttime="20180514 22:42:42.456"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:42.463" starttime="20180514 22:42:42.445"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:42.463" starttime="20180514 22:42:35.515"></status>
+</kw>
+<timeout value="5 minutes"></timeout>
+<status status="PASS" endtime="20180514 22:42:42.463" starttime="20180514 22:42:35.513"></status>
+</kw>
+<test id="s1-s1-s5-t1" name="Invalid_Login_Scenario_With_Invalid_Password">
+<kw name="Given I enter valid username and invalid password" library="keywords">
+<doc>The keyword enter valid username and an invalid password on the given input fields</doc>
+<kw name="user &quot;${VALID_USERNAME}&quot; logs in with password &quot;${INVALID_PASSWORD}&quot;" library="keywords">
+<doc>The keyword will fill the input text field with given username and password</doc>
+<kw name="Input Username" library="keywords">
+<doc>The keyword will inpurt given username to inout field with id usr</doc>
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>usr</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:42.467" level="INFO">Typing text 'admin' into text field 'usr'.</msg>
+<status status="PASS" endtime="20180514 22:42:42.559" starttime="20180514 22:42:42.467"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:42.559" starttime="20180514 22:42:42.466"></status>
+</kw>
+<kw name="Input Password" library="keywords">
+<doc>The keyword will inpurt given password to input field with id pwd</doc>
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>pwd</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:42.560" level="INFO">Typing text 'invalidpassword' into text field 'pwd'.</msg>
+<status status="PASS" endtime="20180514 22:42:42.677" starttime="20180514 22:42:42.560"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:42.677" starttime="20180514 22:42:42.559"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:42.677" starttime="20180514 22:42:42.466"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:42.677" starttime="20180514 22:42:42.465"></status>
+</kw>
+<kw name="When I submit credentials" library="keywords">
+<doc>The keyword will submit credentials to the controller</doc>
+<kw name="Submit Credentials" library="keywords">
+<doc>The keyword will submit credentials to the controller by clicking the Login button</doc>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>Login</arg>
+</arguments>
+<msg timestamp="20180514 22:42:42.679" level="INFO">Clicking button 'Login'.</msg>
+<status status="PASS" endtime="20180514 22:42:43.242" starttime="20180514 22:42:42.679"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:43.244" starttime="20180514 22:42:42.678"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:43.244" starttime="20180514 22:42:42.678"></status>
+</kw>
+<kw name="Then Welcome Page Should not Open" library="keywords">
+<doc>The keyword verifies that the welcome page is not opened</doc>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Location Should Be</arg>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180514 22:42:43.582" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-30.png"&gt;&lt;img src="selenium-screenshot-30.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180514 22:42:43.582" starttime="20180514 22:42:43.260"></status>
+</kw>
+<msg timestamp="20180514 22:42:43.582" level="FAIL">Location should have been 'http://testing-ground.scraping.pro/login?mode=welcome' but was 'http://testing-ground.scraping.pro/login?mode=login'.</msg>
+<status status="FAIL" endtime="20180514 22:42:43.582" starttime="20180514 22:42:43.249"></status>
+</kw>
+<msg timestamp="20180514 22:42:43.582" level="INFO">${status} = False</msg>
+<status status="PASS" endtime="20180514 22:42:43.582" starttime="20180514 22:42:43.247"></status>
+</kw>
+<kw name="Should Not Be True" library="BuiltIn">
+<doc>Fails if the given condition is true.</doc>
+<arguments>
+<arg>${status}</arg>
+</arguments>
+<status status="PASS" endtime="20180514 22:42:43.582" starttime="20180514 22:42:43.582"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>${PAGE_TITLE}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:43.586" level="INFO">Page title is 'Web Scraper Testing Ground'.</msg>
+<status status="PASS" endtime="20180514 22:42:43.587" starttime="20180514 22:42:43.582"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:43.587" starttime="20180514 22:42:43.246"></status>
+</kw>
+<kw name="And verify that the user credentials were not sent" library="keywords">
+<doc>The keyword verifies that page contains text ACCESS DENIED and not contains any other values</doc>
+<kw name="verify that the page does not contain" library="keywords">
+<doc>The keyword verifes that given element doent not contains given text</doc>
+<arguments>
+<arg>${OUTPUT_TEXT_ELEMENT}</arg>
+<arg>WELCOME :)</arg>
+<arg>Able to login page with invalid credentials</arg>
+</arguments>
+<kw name="Element Should Not Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` does not contains text ``expected``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${value}</arg>
+<arg>${error_message}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:43.619" level="INFO">Element 'case_login' does not contain text 'WELCOME :)'.</msg>
+<status status="PASS" endtime="20180514 22:42:43.619" starttime="20180514 22:42:43.588"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:43.619" starttime="20180514 22:42:43.588"></status>
+</kw>
+<kw name="verify that the page does not contain" library="keywords">
+<doc>The keyword verifes that given element doent not contains given text</doc>
+<arguments>
+<arg>${OUTPUT_TEXT_ELEMENT}</arg>
+<arg>THE SESSION COOKIE IS MISSING OR HAS A WRONG VALUE!</arg>
+<arg>User credentials were properly sent but the session cookie was not properly passed</arg>
+</arguments>
+<kw name="Element Should Not Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` does not contains text ``expected``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${value}</arg>
+<arg>${error_message}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:43.638" level="INFO">Element 'case_login' does not contain text 'THE SESSION COOKIE IS MISSING OR HAS A WRONG VALUE!'.</msg>
+<status status="PASS" endtime="20180514 22:42:43.638" starttime="20180514 22:42:43.620"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:43.638" starttime="20180514 22:42:43.620"></status>
+</kw>
+<kw name="verify that the page does not contain" library="keywords">
+<doc>The keyword verifes that given element doent not contains given text</doc>
+<arguments>
+<arg>${OUTPUT_TEXT_ELEMENT}</arg>
+<arg>REDIRECTING...</arg>
+<arg>User credentials were properly sent but HTTP redirection was not processed</arg>
+</arguments>
+<kw name="Element Should Not Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` does not contains text ``expected``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${value}</arg>
+<arg>${error_message}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:43.654" level="INFO">Element 'case_login' does not contain text 'REDIRECTING...'.</msg>
+<status status="PASS" endtime="20180514 22:42:43.654" starttime="20180514 22:42:43.638"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:43.654" starttime="20180514 22:42:43.638"></status>
+</kw>
+<kw name="verify that the page contain" library="keywords">
+<doc>The keyword verifes that given element contains given text</doc>
+<arguments>
+<arg>${OUTPUT_TEXT_ELEMENT}</arg>
+<arg>ACCESS DENIED!</arg>
+<arg>Failed to login scenario with invalid credentials</arg>
+</arguments>
+<kw name="Element Should Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${value}</arg>
+<arg>${error_message}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:43.671" level="INFO">Element 'case_login' contains text 'ACCESS DENIED!'.</msg>
+<status status="PASS" endtime="20180514 22:42:43.671" starttime="20180514 22:42:43.655"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:43.671" starttime="20180514 22:42:43.654"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:43.671" starttime="20180514 22:42:43.587"></status>
+</kw>
+<kw type="teardown" name="Go to the homepage" library="keywords">
+<doc>The keyword verifes that page is redirecting to home page whiel clicking on Go back button</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="case_login"]/a</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180514 22:42:43.700" starttime="20180514 22:42:43.672"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="case_login"]/a</arg>
+</arguments>
+<msg timestamp="20180514 22:42:43.700" level="INFO">Clicking element 'xpath=//*[@id="case_login"]/a'.</msg>
+<status status="PASS" endtime="20180514 22:42:44.090" starttime="20180514 22:42:43.700"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="keywords">
+<doc>The keyword verifies that login page is opened</doc>
+<kw name="Location Should Contain" library="Selenium2Library">
+<doc>Verifies that current URL contains ``expected``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:44.097" level="INFO">Current location contains 'http://testing-ground.scraping.pro/login'.</msg>
+<status status="PASS" endtime="20180514 22:42:44.097" starttime="20180514 22:42:44.091"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>${PAGE_TITLE}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:44.104" level="INFO">Page title is 'Web Scraper Testing Ground'.</msg>
+<status status="PASS" endtime="20180514 22:42:44.104" starttime="20180514 22:42:44.097"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:44.104" starttime="20180514 22:42:44.091"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:44.104" starttime="20180514 22:42:43.672"></status>
+</kw>
+<doc>The test to verify invalid login scenario. It will verify that page is showing error
+properly if the user enters valid usename and invalid password</doc>
+<tags>
+<tag>invalidLogin</tag>
+</tags>
+<status status="PASS" endtime="20180514 22:42:44.105" critical="yes" starttime="20180514 22:42:42.463"></status>
+</test>
+<kw type="teardown" name="Default Suite Teardown" library="keywords">
+<doc>The keyword contains the Default Teardown steps for the Functional Tests</doc>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180514 22:42:47.315" starttime="20180514 22:42:44.108"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:47.315" starttime="20180514 22:42:44.108"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:47.315" starttime="20180514 22:42:35.503"></status>
+</suite>
+<suite source="D:\My lab\Automated_web_application_login_tests\Tests\Invalid Login\Invalid_Login_Scenario_With_Invalid_Username.robot" id="s1-s1-s6" name="Invalid Login Scenario With Invalid Username">
+<kw type="setup" name="Default Suite Setup" library="keywords">
+<doc>The keyword contains the Default Setup steps for running the Functional Tests</doc>
+<kw name="Open Browser To Login Page" library="keywords">
+<doc>The keyword opens the login page and verify the login page is opened</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>browser=${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:47.339" level="INFO">Opening browser 'chrome' to base url 'http://testing-ground.scraping.pro/login'.</msg>
+<status status="PASS" endtime="20180514 22:42:53.038" starttime="20180514 22:42:47.336"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180514 22:42:54.199" starttime="20180514 22:42:53.038"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="keywords">
+<doc>The keyword verifies that login page is opened</doc>
+<kw name="Location Should Contain" library="Selenium2Library">
+<doc>Verifies that current URL contains ``expected``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:54.210" level="INFO">Current location contains 'http://testing-ground.scraping.pro/login'.</msg>
+<status status="PASS" endtime="20180514 22:42:54.211" starttime="20180514 22:42:54.199"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>${PAGE_TITLE}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:54.220" level="INFO">Page title is 'Web Scraper Testing Ground'.</msg>
+<status status="PASS" endtime="20180514 22:42:54.221" starttime="20180514 22:42:54.211"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:54.221" starttime="20180514 22:42:54.199"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:54.221" starttime="20180514 22:42:47.336"></status>
+</kw>
+<timeout value="5 minutes"></timeout>
+<status status="PASS" endtime="20180514 22:42:54.221" starttime="20180514 22:42:47.336"></status>
+</kw>
+<test id="s1-s1-s6-t1" name="Invalid_Login_Scenario_With_Invalid_Username">
+<kw name="Given I enter invalid username and valid password" library="keywords">
+<doc>The keyword enter an invalid username and valid password on the given input fields</doc>
+<kw name="user &quot;${INVALID_USERNAME}&quot; logs in with password &quot;${VALID_PASSWORD}&quot;" library="keywords">
+<doc>The keyword will fill the input text field with given username and password</doc>
+<kw name="Input Username" library="keywords">
+<doc>The keyword will inpurt given username to inout field with id usr</doc>
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>usr</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:54.226" level="INFO">Typing text 'invalidadmin' into text field 'usr'.</msg>
+<status status="PASS" endtime="20180514 22:42:54.356" starttime="20180514 22:42:54.226"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:54.356" starttime="20180514 22:42:54.225"></status>
+</kw>
+<kw name="Input Password" library="keywords">
+<doc>The keyword will inpurt given password to input field with id pwd</doc>
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>pwd</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:54.357" level="INFO">Typing text '12345' into text field 'pwd'.</msg>
+<status status="PASS" endtime="20180514 22:42:54.442" starttime="20180514 22:42:54.357"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:54.442" starttime="20180514 22:42:54.357"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:54.442" starttime="20180514 22:42:54.224"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:54.442" starttime="20180514 22:42:54.224"></status>
+</kw>
+<kw name="When I submit credentials" library="keywords">
+<doc>The keyword will submit credentials to the controller</doc>
+<kw name="Submit Credentials" library="keywords">
+<doc>The keyword will submit credentials to the controller by clicking the Login button</doc>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>Login</arg>
+</arguments>
+<msg timestamp="20180514 22:42:54.443" level="INFO">Clicking button 'Login'.</msg>
+<status status="PASS" endtime="20180514 22:42:54.969" starttime="20180514 22:42:54.443"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:54.970" starttime="20180514 22:42:54.443"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:54.970" starttime="20180514 22:42:54.443"></status>
+</kw>
+<kw name="Then Welcome Page Should not Open" library="keywords">
+<doc>The keyword verifies that the welcome page is not opened</doc>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Location Should Be</arg>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180514 22:42:55.258" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-31.png"&gt;&lt;img src="selenium-screenshot-31.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180514 22:42:55.258" starttime="20180514 22:42:54.982"></status>
+</kw>
+<msg timestamp="20180514 22:42:55.258" level="FAIL">Location should have been 'http://testing-ground.scraping.pro/login?mode=welcome' but was 'http://testing-ground.scraping.pro/login?mode=login'.</msg>
+<status status="FAIL" endtime="20180514 22:42:55.258" starttime="20180514 22:42:54.973"></status>
+</kw>
+<msg timestamp="20180514 22:42:55.258" level="INFO">${status} = False</msg>
+<status status="PASS" endtime="20180514 22:42:55.258" starttime="20180514 22:42:54.973"></status>
+</kw>
+<kw name="Should Not Be True" library="BuiltIn">
+<doc>Fails if the given condition is true.</doc>
+<arguments>
+<arg>${status}</arg>
+</arguments>
+<status status="PASS" endtime="20180514 22:42:55.258" starttime="20180514 22:42:55.258"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>${PAGE_TITLE}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:55.267" level="INFO">Page title is 'Web Scraper Testing Ground'.</msg>
+<status status="PASS" endtime="20180514 22:42:55.267" starttime="20180514 22:42:55.258"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:55.267" starttime="20180514 22:42:54.971"></status>
+</kw>
+<kw name="And verify that the user credentials were not sent" library="keywords">
+<doc>The keyword verifies that page contains text ACCESS DENIED and not contains any other values</doc>
+<kw name="verify that the page does not contain" library="keywords">
+<doc>The keyword verifes that given element doent not contains given text</doc>
+<arguments>
+<arg>${OUTPUT_TEXT_ELEMENT}</arg>
+<arg>WELCOME :)</arg>
+<arg>Able to login page with invalid credentials</arg>
+</arguments>
+<kw name="Element Should Not Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` does not contains text ``expected``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${value}</arg>
+<arg>${error_message}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:55.299" level="INFO">Element 'case_login' does not contain text 'WELCOME :)'.</msg>
+<status status="PASS" endtime="20180514 22:42:55.299" starttime="20180514 22:42:55.268"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:55.299" starttime="20180514 22:42:55.268"></status>
+</kw>
+<kw name="verify that the page does not contain" library="keywords">
+<doc>The keyword verifes that given element doent not contains given text</doc>
+<arguments>
+<arg>${OUTPUT_TEXT_ELEMENT}</arg>
+<arg>THE SESSION COOKIE IS MISSING OR HAS A WRONG VALUE!</arg>
+<arg>User credentials were properly sent but the session cookie was not properly passed</arg>
+</arguments>
+<kw name="Element Should Not Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` does not contains text ``expected``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${value}</arg>
+<arg>${error_message}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:55.318" level="INFO">Element 'case_login' does not contain text 'THE SESSION COOKIE IS MISSING OR HAS A WRONG VALUE!'.</msg>
+<status status="PASS" endtime="20180514 22:42:55.318" starttime="20180514 22:42:55.300"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:55.318" starttime="20180514 22:42:55.300"></status>
+</kw>
+<kw name="verify that the page does not contain" library="keywords">
+<doc>The keyword verifes that given element doent not contains given text</doc>
+<arguments>
+<arg>${OUTPUT_TEXT_ELEMENT}</arg>
+<arg>REDIRECTING...</arg>
+<arg>User credentials were properly sent but HTTP redirection was not processed</arg>
+</arguments>
+<kw name="Element Should Not Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` does not contains text ``expected``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${value}</arg>
+<arg>${error_message}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:55.335" level="INFO">Element 'case_login' does not contain text 'REDIRECTING...'.</msg>
+<status status="PASS" endtime="20180514 22:42:55.335" starttime="20180514 22:42:55.319"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:55.335" starttime="20180514 22:42:55.318"></status>
+</kw>
+<kw name="verify that the page contain" library="keywords">
+<doc>The keyword verifes that given element contains given text</doc>
+<arguments>
+<arg>${OUTPUT_TEXT_ELEMENT}</arg>
+<arg>ACCESS DENIED!</arg>
+<arg>Failed to login scenario with invalid credentials</arg>
+</arguments>
+<kw name="Element Should Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${value}</arg>
+<arg>${error_message}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:55.353" level="INFO">Element 'case_login' contains text 'ACCESS DENIED!'.</msg>
+<status status="PASS" endtime="20180514 22:42:55.353" starttime="20180514 22:42:55.336"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:55.353" starttime="20180514 22:42:55.335"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:55.353" starttime="20180514 22:42:55.268"></status>
+</kw>
+<kw type="teardown" name="Go to the homepage" library="keywords">
+<doc>The keyword verifes that page is redirecting to home page whiel clicking on Go back button</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="case_login"]/a</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180514 22:42:55.382" starttime="20180514 22:42:55.354"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="case_login"]/a</arg>
+</arguments>
+<msg timestamp="20180514 22:42:55.383" level="INFO">Clicking element 'xpath=//*[@id="case_login"]/a'.</msg>
+<status status="PASS" endtime="20180514 22:42:55.894" starttime="20180514 22:42:55.382"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="keywords">
+<doc>The keyword verifies that login page is opened</doc>
+<kw name="Location Should Contain" library="Selenium2Library">
+<doc>Verifies that current URL contains ``expected``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:55.904" level="INFO">Current location contains 'http://testing-ground.scraping.pro/login'.</msg>
+<status status="PASS" endtime="20180514 22:42:55.904" starttime="20180514 22:42:55.894"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>${PAGE_TITLE}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:55.909" level="INFO">Page title is 'Web Scraper Testing Ground'.</msg>
+<status status="PASS" endtime="20180514 22:42:55.909" starttime="20180514 22:42:55.904"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:55.909" starttime="20180514 22:42:55.894"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:55.909" starttime="20180514 22:42:55.354"></status>
+</kw>
+<doc>The test to verify invalid login scenario. It will verify that page is showing error
+properly if the user enters valid username and invalid password</doc>
+<tags>
+<tag>invalidLogin</tag>
+</tags>
+<status status="PASS" endtime="20180514 22:42:55.910" critical="yes" starttime="20180514 22:42:54.222"></status>
+</test>
+<kw type="teardown" name="Default Suite Teardown" library="keywords">
+<doc>The keyword contains the Default Teardown steps for the Functional Tests</doc>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180514 22:42:59.197" starttime="20180514 22:42:55.916"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:59.197" starttime="20180514 22:42:55.915"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:42:59.197" starttime="20180514 22:42:47.322"></status>
+</suite>
+<status status="PASS" endtime="20180514 22:42:59.203" starttime="20180514 22:41:49.377"></status>
+</suite>
+<suite source="D:\My lab\Automated_web_application_login_tests\Tests\Valid Login" id="s1-s2" name="Valid Login">
+<suite source="D:\My lab\Automated_web_application_login_tests\Tests\Valid Login\Valid_Login_Scenario.robot" id="s1-s2-s1" name="Valid Login Scenario">
+<kw type="setup" name="Default Suite Setup" library="keywords">
+<doc>The keyword contains the Default Setup steps for running the Functional Tests</doc>
+<kw name="Open Browser To Login Page" library="keywords">
+<doc>The keyword opens the login page and verify the login page is opened</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>browser=${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180514 22:42:59.220" level="INFO">Opening browser 'chrome' to base url 'http://testing-ground.scraping.pro/login'.</msg>
+<status status="PASS" endtime="20180514 22:43:04.982" starttime="20180514 22:42:59.219"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180514 22:43:06.124" starttime="20180514 22:43:04.983"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="keywords">
+<doc>The keyword verifies that login page is opened</doc>
+<kw name="Location Should Contain" library="Selenium2Library">
+<doc>Verifies that current URL contains ``expected``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+</arguments>
+<msg timestamp="20180514 22:43:06.136" level="INFO">Current location contains 'http://testing-ground.scraping.pro/login'.</msg>
+<status status="PASS" endtime="20180514 22:43:06.136" starttime="20180514 22:43:06.124"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>${PAGE_TITLE}</arg>
+</arguments>
+<msg timestamp="20180514 22:43:06.147" level="INFO">Page title is 'Web Scraper Testing Ground'.</msg>
+<status status="PASS" endtime="20180514 22:43:06.147" starttime="20180514 22:43:06.137"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:43:06.148" starttime="20180514 22:43:06.124"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:43:06.148" starttime="20180514 22:42:59.219"></status>
+</kw>
+<timeout value="5 minutes"></timeout>
+<status status="PASS" endtime="20180514 22:43:06.149" starttime="20180514 22:42:59.218"></status>
+</kw>
+<test id="s1-s2-s1-t1" name="Valid_Login_Scenario">
+<kw name="Given I enter valid username and password" library="keywords">
+<doc>The keyword enter valid username and password on the given input fields</doc>
+<kw name="user &quot;${VALID_USERNAME}&quot; logs in with password &quot;${VALID_PASSWORD}&quot;" library="keywords">
+<doc>The keyword will fill the input text field with given username and password</doc>
+<kw name="Input Username" library="keywords">
+<doc>The keyword will inpurt given username to inout field with id usr</doc>
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>usr</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180514 22:43:06.153" level="INFO">Typing text 'admin' into text field 'usr'.</msg>
+<status status="PASS" endtime="20180514 22:43:06.251" starttime="20180514 22:43:06.153"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:43:06.253" starttime="20180514 22:43:06.152"></status>
+</kw>
+<kw name="Input Password" library="keywords">
+<doc>The keyword will inpurt given password to input field with id pwd</doc>
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>pwd</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180514 22:43:06.254" level="INFO">Typing text '12345' into text field 'pwd'.</msg>
+<status status="PASS" endtime="20180514 22:43:06.338" starttime="20180514 22:43:06.253"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:43:06.339" starttime="20180514 22:43:06.253"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:43:06.339" starttime="20180514 22:43:06.152"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:43:06.339" starttime="20180514 22:43:06.151"></status>
+</kw>
+<kw name="When I submit credentials" library="keywords">
+<doc>The keyword will submit credentials to the controller</doc>
+<kw name="Submit Credentials" library="keywords">
+<doc>The keyword will submit credentials to the controller by clicking the Login button</doc>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>Login</arg>
+</arguments>
+<msg timestamp="20180514 22:43:06.340" level="INFO">Clicking button 'Login'.</msg>
+<status status="PASS" endtime="20180514 22:43:07.020" starttime="20180514 22:43:06.340"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:43:07.021" starttime="20180514 22:43:06.340"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:43:07.021" starttime="20180514 22:43:06.340"></status>
+</kw>
+<kw name="Then welcome page should be open" library="keywords">
+<doc>The keyword verifies that the welcome page is opened</doc>
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<msg timestamp="20180514 22:43:07.028" level="INFO">Current location is 'http://testing-ground.scraping.pro/login?mode=welcome'.</msg>
+<status status="PASS" endtime="20180514 22:43:07.028" starttime="20180514 22:43:07.022"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>${PAGE_TITLE}</arg>
+</arguments>
+<msg timestamp="20180514 22:43:07.035" level="INFO">Page title is 'Web Scraper Testing Ground'.</msg>
+<status status="PASS" endtime="20180514 22:43:07.035" starttime="20180514 22:43:07.029"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:43:07.035" starttime="20180514 22:43:07.022"></status>
+</kw>
+<kw name="And verify that the user credentials were sent" library="keywords">
+<doc>The keyword verifies that page contains text WELCOME and not contains any other values</doc>
+<kw name="verify that the page does not contain" library="keywords">
+<doc>The keyword verifes that given element doent not contains given text</doc>
+<arguments>
+<arg>${OUTPUT_TEXT_ELEMENT}</arg>
+<arg>ACCESS DENIED!</arg>
+<arg>Failed to send user credentials properly. Access is denied</arg>
+</arguments>
+<kw name="Element Should Not Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` does not contains text ``expected``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${value}</arg>
+<arg>${error_message}</arg>
+</arguments>
+<msg timestamp="20180514 22:43:07.070" level="INFO">Element 'case_login' does not contain text 'ACCESS DENIED!'.</msg>
+<status status="PASS" endtime="20180514 22:43:07.070" starttime="20180514 22:43:07.037"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:43:07.070" starttime="20180514 22:43:07.036"></status>
+</kw>
+<kw name="verify that the page does not contain" library="keywords">
+<doc>The keyword verifes that given element doent not contains given text</doc>
+<arguments>
+<arg>${OUTPUT_TEXT_ELEMENT}</arg>
+<arg>THE SESSION COOKIE IS MISSING OR HAS A WRONG VALUE!</arg>
+<arg>User credentials were properly sent but the session cookie was not properly passed</arg>
+</arguments>
+<kw name="Element Should Not Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` does not contains text ``expected``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${value}</arg>
+<arg>${error_message}</arg>
+</arguments>
+<msg timestamp="20180514 22:43:07.089" level="INFO">Element 'case_login' does not contain text 'THE SESSION COOKIE IS MISSING OR HAS A WRONG VALUE!'.</msg>
+<status status="PASS" endtime="20180514 22:43:07.089" starttime="20180514 22:43:07.070"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:43:07.089" starttime="20180514 22:43:07.070"></status>
+</kw>
+<kw name="verify that the page does not contain" library="keywords">
+<doc>The keyword verifes that given element doent not contains given text</doc>
+<arguments>
+<arg>${OUTPUT_TEXT_ELEMENT}</arg>
+<arg>REDIRECTING...</arg>
+<arg>User credentials were properly sent but HTTP redirection was not processed</arg>
+</arguments>
+<kw name="Element Should Not Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` does not contains text ``expected``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${value}</arg>
+<arg>${error_message}</arg>
+</arguments>
+<msg timestamp="20180514 22:43:07.107" level="INFO">Element 'case_login' does not contain text 'REDIRECTING...'.</msg>
+<status status="PASS" endtime="20180514 22:43:07.107" starttime="20180514 22:43:07.090"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:43:07.107" starttime="20180514 22:43:07.089"></status>
+</kw>
+<kw name="verify that the page contain" library="keywords">
+<doc>The keyword verifes that given element contains given text</doc>
+<arguments>
+<arg>${OUTPUT_TEXT_ELEMENT}</arg>
+<arg>WELCOME :)</arg>
+<arg>Failed to send user credentials</arg>
+</arguments>
+<kw name="Element Should Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>${value}</arg>
+<arg>${error_message}</arg>
+</arguments>
+<msg timestamp="20180514 22:43:07.125" level="INFO">Element 'case_login' contains text 'WELCOME :)'.</msg>
+<status status="PASS" endtime="20180514 22:43:07.125" starttime="20180514 22:43:07.108"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:43:07.126" starttime="20180514 22:43:07.107"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:43:07.126" starttime="20180514 22:43:07.036"></status>
+</kw>
+<kw type="teardown" name="Go to the homepage" library="keywords">
+<doc>The keyword verifes that page is redirecting to home page whiel clicking on Go back button</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="case_login"]/a</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20180514 22:43:07.154" starttime="20180514 22:43:07.127"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="case_login"]/a</arg>
+</arguments>
+<msg timestamp="20180514 22:43:07.154" level="INFO">Clicking element 'xpath=//*[@id="case_login"]/a'.</msg>
+<status status="PASS" endtime="20180514 22:43:07.500" starttime="20180514 22:43:07.154"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="keywords">
+<doc>The keyword verifies that login page is opened</doc>
+<kw name="Location Should Contain" library="Selenium2Library">
+<doc>Verifies that current URL contains ``expected``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+</arguments>
+<msg timestamp="20180514 22:43:07.506" level="INFO">Current location contains 'http://testing-ground.scraping.pro/login'.</msg>
+<status status="PASS" endtime="20180514 22:43:07.506" starttime="20180514 22:43:07.501"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>${PAGE_TITLE}</arg>
+</arguments>
+<msg timestamp="20180514 22:43:07.511" level="INFO">Page title is 'Web Scraper Testing Ground'.</msg>
+<status status="PASS" endtime="20180514 22:43:07.512" starttime="20180514 22:43:07.507"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:43:07.512" starttime="20180514 22:43:07.500"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:43:07.512" starttime="20180514 22:43:07.126"></status>
+</kw>
+<doc>The test to verify valid login scenario. It will verify that page is
+redirecting properly if the user enters valid credentials</doc>
+<tags>
+<tag>validLogin</tag>
+</tags>
+<status status="PASS" endtime="20180514 22:43:07.513" critical="yes" starttime="20180514 22:43:06.149"></status>
+</test>
+<kw type="teardown" name="Default Suite Teardown" library="keywords">
+<doc>The keyword contains the Default Teardown steps for the Functional Tests</doc>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180514 22:43:10.694" starttime="20180514 22:43:07.517"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:43:10.695" starttime="20180514 22:43:07.517"></status>
+</kw>
+<status status="PASS" endtime="20180514 22:43:10.695" starttime="20180514 22:42:59.210"></status>
+</suite>
+<status status="PASS" endtime="20180514 22:43:10.705" starttime="20180514 22:42:59.208"></status>
+</suite>
+<status status="PASS" endtime="20180514 22:43:10.718" starttime="20180514 22:41:49.353"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="7">Critical Tests</stat>
+<stat fail="0" pass="7">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="6">invalidLogin</stat>
+<stat fail="0" pass="1">validLogin</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Tests" pass="7">Tests</stat>
+<stat fail="0" id="s1-s1" name="Invalid Login" pass="6">Tests.Invalid Login</stat>
+<stat fail="0" id="s1-s1-s1" name="Invalid Login Scenario" pass="1">Tests.Invalid Login.Invalid Login Scenario</stat>
+<stat fail="0" id="s1-s1-s2" name="Invalid Login Scenario With Empty Password" pass="1">Tests.Invalid Login.Invalid Login Scenario With Empty Password</stat>
+<stat fail="0" id="s1-s1-s3" name="Invalid Login Scenario With Empty Username" pass="1">Tests.Invalid Login.Invalid Login Scenario With Empty Username</stat>
+<stat fail="0" id="s1-s1-s4" name="Invalid Login Scenario With Empty Username And Empty Password" pass="1">Tests.Invalid Login.Invalid Login Scenario With Empty Username And Empty Password</stat>
+<stat fail="0" id="s1-s1-s5" name="Invalid Login Scenario With Invalid Password" pass="1">Tests.Invalid Login.Invalid Login Scenario With Invalid Password</stat>
+<stat fail="0" id="s1-s1-s6" name="Invalid Login Scenario With Invalid Username" pass="1">Tests.Invalid Login.Invalid Login Scenario With Invalid Username</stat>
+<stat fail="0" id="s1-s2" name="Valid Login" pass="1">Tests.Valid Login</stat>
+<stat fail="0" id="s1-s2-s1" name="Valid Login Scenario" pass="1">Tests.Valid Login.Valid Login Scenario</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
