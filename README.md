@@ -24,6 +24,9 @@ pip install --upgrade robotframework-selenium2library
 
 2. Change to the home directory: cd Automated_web_application_login_tests
 
-3. Execute the tests robot Tests/
+3. Execute the tests 
+```
+robot Tests/
+```
 
 
