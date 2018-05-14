@@ -3,19 +3,19 @@ Set of automated functional tests using Robot framework to verify web applicatio
 
 ## Prerequisite
 
-1. Install Python 2.7 and PIP {https://github.com/BurntSushi/nfldb/wiki/Python-&-pip-Windows-installation}
+1. Install Python 2.7 and PIP  https://github.com/BurntSushi/nfldb/wiki/Python-&-pip-Windows-installation
 
-2. Install Robotframework(https://www.swtestacademy.com/getting-started-robotframework/):
+2. Install Robotframework  https://www.swtestacademy.com/getting-started-robotframework/:
 ```
 pip install robotframework
 ```
 
-3. Install Robotframework robotframework-selenium2library(https://github.com/robotframework/SeleniumLibrary):
+3. Install Robotframework robotframework-selenium2library  https://github.com/robotframework/SeleniumLibrary:
 ```
 pip install --upgrade robotframework-selenium2library
 ```
 
-4. Install Google chrome and Chrome driver (https://www.youtube.com/watch?v=dz59GsdvUF8)
+4. Install Google chrome and Chrome driver  https://www.youtube.com/watch?v=dz59GsdvUF8
 
 
 ## How to execute tests
