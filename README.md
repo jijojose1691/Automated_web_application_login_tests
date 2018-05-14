@@ -7,7 +7,7 @@ Set of automated functional tests using Robot framework to verify web applicatio
 	pip install robotframework
 3. Install Robotframework robotframework-selenium2library: (https://github.com/robotframework/SeleniumLibrary)
 	pip install --upgrade robotframework-selenium2library
-4. Install Chrome driver (https://www.youtube.com/watch?v=dz59GsdvUF8)
+4. Install Google chrome and Chrome driver (https://www.youtube.com/watch?v=dz59GsdvUF8)
 
 ## How to execute tests
 1. Clone the repository  https://github.com/jijojose1691/Automated_web_application_login_tests.git
